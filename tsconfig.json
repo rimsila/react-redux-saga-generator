@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react",
+    "lib": ["es5", "es6", "dom"],
+    "typeRoots": ["typings", "node_modules/@types"],
+    "baseUrl": ".",
+    "paths": {
+      "@/utils*": ["./src/utils/*"],
+      "@/services/*": ["./src/services/*"],
+      "@/page/*": ["./src/page/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/hocs/*": ["./src/hocs/*"],
+      "@/routes/*": ["./src/routes/*"],
+      "@/redux-store/*": ["src/redux-store/*"]
+    }
+  },
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts", "**/*.tsx"],
+  "awesomeTypescriptLoaderOptions": {
+    "reportFiles": ["./src/**/*"]
+  }
+}
