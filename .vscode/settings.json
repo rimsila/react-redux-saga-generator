@@ -11,6 +11,7 @@
         "intialize",
         "nextjs",
         "occured",
+        "postbuild",
         "successible"
     ]
 }

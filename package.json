@@ -38,6 +38,7 @@
     "https:prod": "webpack -p --https --config=configs/webpack/prod.js",
     "prod": "node express.js",
     "analyze": "yarn build && webpack -p --config=configs/webpack/analyzer.js",
+    "heroku": "webpack -p --config=configs/webpack/prod.js",
     "------------------ TESTING ------------------------------------------": "",
     "test": "jest --coverage --watchAll --config=configs/jest.json",
     "------------------ TOOL & GENERATOR ---------------------------------": "",
@@ -54,6 +55,7 @@
   "<========================= DEPENDENCY ==================================>": "",
   "dependencies": {
     "axios": "^0.20.0",
+    "cors": "^2.8.5",
     "mini-css-extract-plugin": "^1.0.0",
     "react": "^16.13.1",
     "react-redux": "^7.2.1",
