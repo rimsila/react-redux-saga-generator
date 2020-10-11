@@ -53,10 +53,6 @@ module.exports = {
           "image-webpack-loader?bypassOnDebug&optipng.optimizationLevel=7&gifsicle.interlaced=false",
         ],
       },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: ["file-loader"],
-      },
     ],
   },
   plugins: [new CheckerPlugin()],
