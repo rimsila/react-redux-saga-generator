@@ -17,12 +17,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vikpe/react-webpack-typescript-starter.git"
+    "url": "git+https://github.com/rimsila/react-redux-saga-generator.git"
   },
   "bugs": {
-    "url": "https://github.com/vikpe/react-webpack-typescript-starter/issues"
+    "url": "https://github.com/rimsila/react-redux-saga-generator.git/issues"
   },
-  "homepage": "https://github.com/vikpe/react-webpack-typescript-starter",
+  "homepage": "https://github.com/rimsila/react-redux-saga-generator.git",
   "<========================= SCRIPT ==================================>": "",
   "scripts": {
     "------------------ HELPERS ----------------------------------------": "",
@@ -38,7 +38,7 @@
     "https:prod": "webpack -p --https --config=configs/webpack/prod.js",
     "prod": "node express.js",
     "analyze": "yarn build && webpack -p --config=configs/webpack/analyzer.js",
-    "deploy": "gh-pages --repo https://github.com/rimsila/react-redux-saga-generator.git -d build",
+    "deploy": "gh-pages -d build",
 
     "------------------ TESTING ------------------------------------------": "",
     "test": "jest --coverage --watchAll --config=configs/jest.json",
