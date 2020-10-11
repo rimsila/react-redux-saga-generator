@@ -1,15 +1,20 @@
-import * as React from "react";
 import "./styles.css";
+
+import * as React from "react";
+
 import { useDispatch, useSelector } from "react-redux";
+
+import { ReactAppEnv } from "@/enum";
 import { fetchUsers } from "@/redux-store/users/actions";
 import { usersState } from "@/redux-store/users/selectors";
+
 const NotFound = () => {
   const dispatch = useDispatch();
   const {
     booleanable: { isFetchUsersInProgress, isUpdate },
   } = useSelector(usersState());
 
-  console.log(process.env.REACT_APP_STAGE);
+  console.log("ReactAppEnv", ReactAppEnv);
 
   if (isFetchUsersInProgress) return <h1>Loading.....</h1>;
 

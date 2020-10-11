@@ -1,8 +1,10 @@
 .idea/
 dist/
+build/
 node_modules/
 src/**/*.jsx
 tests/__coverage__/
 tests/**/*.jsx
 .env.dev
 .env.prod
+.env.staging

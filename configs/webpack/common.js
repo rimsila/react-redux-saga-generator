@@ -7,6 +7,8 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
     alias: {
+      "@/enum": resolve(__dirname, "../../src/enums/index"),
+      "@/enums": resolve(__dirname, "../../src/enums"),
       "@/utils": resolve(__dirname, "../../src/utils"),
       "@/services": resolve(__dirname, "../../src/services"),
       "@/page": resolve(__dirname, "../../src/page"),
@@ -22,7 +24,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: ["babel-loader", "source-map-loader"],
+        use: ["babel-loader"],
         exclude: /node_modules/,
       },
       {
@@ -45,21 +47,28 @@ module.exports = {
         ],
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(jpe?g|png|gif|svg|ico)$/i,
         loaders: [
           "file-loader?hash=sha512&digest=hex&name=img/[hash].[ext]",
           "image-webpack-loader?bypassOnDebug&optipng.optimizationLevel=7&gifsicle.interlaced=false",
+        ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          'file-loader',
         ],
       },
     ],
   },
   plugins: [
     new CheckerPlugin(),
-    new HtmlWebpackPlugin({ template: "index.html.ejs" }),
+    
   ],
   externals: {
     react: "React",
     "react-dom": "ReactDOM",
+    "react-helmet": "react-helmet",
   },
   performance: {
     hints: false,

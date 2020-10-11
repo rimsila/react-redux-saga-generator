@@ -30,7 +30,7 @@ module.exports = merge(commonConfig, {
     }),
     new webpack.HotModuleReplacementPlugin(), // enable HMR globally
     new Dotenv({
-      path: join(__dirname, ".env.dev"), // load this now instead of the ones in '.env'
+      path: join(__dirname, ".env.staging"), // load this now instead of the ones in '.env'
     }),
   ],
 });

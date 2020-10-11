@@ -1,5 +1,5 @@
 import * as React from "react";
-
+import { hot } from "react-hot-loader";
 import { Provider } from "react-redux";
 import { configureStore } from "@/redux-store/createStore";
 
@@ -10,7 +10,6 @@ import { PersistGate } from "redux-persist/integration/react";
 
 import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "./routes";
-import { FavoriteProvider } from "@/redux-store/favorite/useHook";
 // import { FavoriteProvider } from "./store/favorite/useHook.js";
 // import theme from './themes';
 // import SnackbarCustom from '@/components/SnackbarCustom';
@@ -34,4 +33,5 @@ function App() {
   );
 }
 
-export default App;
+declare let module: Record<string, unknown>;
+export default hot(module)(App);

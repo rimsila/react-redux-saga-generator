@@ -10,7 +10,9 @@
     "typeRoots": ["typings", "node_modules/@types"],
     "baseUrl": ".",
     "paths": {
-      "@/utils*": ["./src/utils/*"],
+      "@/enum": ["./src/enums/"],
+      "@/enums/*": ["./src/enums/*"],
+      "@/utils/*": ["./src/utils/*"],
       "@/services/*": ["./src/services/*"],
       "@/page/*": ["./src/page/*"],
       "@/components/*": ["./src/components/*"],
@@ -21,7 +23,7 @@
     }
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx", "src/index.js"],
+  "include": ["**/*.ts", "**/*.tsx", "src/index.tsx"],
   "awesomeTypescriptLoaderOptions": {
     "reportFiles": ["./src/**/*"]
   }
