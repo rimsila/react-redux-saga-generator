@@ -55,21 +55,12 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [
-          'file-loader',
-        ],
+        use: ["file-loader"],
       },
     ],
   },
-  plugins: [
-    new CheckerPlugin(),
-    
-  ],
-  externals: {
-    react: "React",
-    "react-dom": "ReactDOM",
-    "react-helmet": "react-helmet",
-  },
+  plugins: [new CheckerPlugin()],
+  externals: {},
   performance: {
     hints: false,
   },

@@ -23,7 +23,7 @@ module.exports = merge(commonConfig, {
     new HtmlWebpackPlugin({
       // hash: true,
       inject: true,
-      template: "index.html.ejs",
+      template: "index.html",
       favicon: 'assets/images/favicon.ico',
       minify: {
         removeComments: true,

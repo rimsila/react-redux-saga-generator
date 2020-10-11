@@ -27,7 +27,6 @@ const httpMethod = async (
 
   //* header form method delete
   axios.defaults.headers.delete["Content-Type"] = "application/json";
-  axios.defaults.headers.get["Content-Type"] = "application/json";
 
   // if has newBaseURL
   if (newBaseURL) {
