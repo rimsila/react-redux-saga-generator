@@ -26,6 +26,5 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 0,
     '@typescript-eslint/explicit-module-boundary-types': 0,
     '@typescript-eslint/no-empty-interface': 0,
-    quotes: [2, 'single', { avoidEscape: true }],
   },
 };
