@@ -1,8 +1,11 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import { all, takeLatest, put, call } from "redux-saga/effects";
 import * as type from "./constants";
+
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import { all, call, put, takeLatest } from "redux-saga/effects";
+
 import ac from "./actions";
-import api from "@/services/favorite";
+import api from "@/apis/favorite";
+
 /* new-saga-goes-here */
 
 export default function* favoriteSaga() {

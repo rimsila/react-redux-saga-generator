@@ -1,19 +1,15 @@
+import { DEFAULT_ACTION, FETCH_USERS } from "./constants";
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable redux-saga/no-unhandled-errors */
-import { all, select, takeLatest, delay, put, call } from "redux-saga/effects";
+import { all, call, delay, put, select, takeLatest } from "redux-saga/effects";
 import {
-  DEFAULT_ACTION,
-  FETCH_USERS,
-  /* new-constant-import-goes-here */
-} from "./constants";
-import {
-  toggleUsersBooleanableState,
-  fetchUsersSuccess,
   fetchUsersError,
-  /* new-action-import-goes-here */
+  fetchUsersSuccess,
+  toggleUsersBooleanableState,
 } from "./actions";
+
+import api from "@/apis/favorite";
 import { selectUsersBooleanableState } from "./selectors";
-import api from "@/services/favorite";
 
 export function* intializeSaga() {
   const booleanable = yield select(

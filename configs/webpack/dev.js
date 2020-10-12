@@ -26,7 +26,7 @@ module.exports = merge(commonConfig, {
       // hash: true,
       inject: true,
       template: "index.html",
-      favicon: "assets/images/favicon.ico",
+      favicon: "static/images/favicon.ico",
     }),
     new webpack.HotModuleReplacementPlugin(), // enable HMR globally
     new Dotenv({

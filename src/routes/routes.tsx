@@ -1,7 +1,7 @@
 import { ROUTE_PATH } from "@/utils/route-util";
 import { lazy } from "react";
 
-const NotFound = lazy(() => import("@/page/NotFound"));
+const NotFound = lazy(() => import("@/pages/NotFound"));
 
 export const routes = [
   {

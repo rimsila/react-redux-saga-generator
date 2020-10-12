@@ -24,7 +24,7 @@ module.exports = merge(commonConfig, {
       // hash: true,
       inject: true,
       template: "index.html",
-      favicon: 'assets/images/favicon.ico',
+      favicon: 'static/images/favicon.ico',
       minify: {
         removeComments: true,
         collapseWhitespace: true,
