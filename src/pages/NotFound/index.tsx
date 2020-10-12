@@ -1,21 +1,8 @@
-import "./styles.css";
+import './styles.css';
 
-import * as React from "react";
-
-import { useDispatch, useSelector } from "react-redux";
-
-import { fetchUsers } from "@/redux-store/users/actions";
-import { usersState } from "@/redux-store/users/selectors";
+import * as React from 'react';
 
 const NotFound = () => {
-  const dispatch = useDispatch();
-  const {
-    booleanable: { isFetchUsersInProgress },
-  } = useSelector(usersState());
-
-
-  if (isFetchUsersInProgress) return <h1>Loading.....</h1>;
-
   return (
     <div id="notfound">
       <div className="notfound">
@@ -28,7 +15,6 @@ const NotFound = () => {
           The page you are looking for might have been removed had its name
           changed or is temporarily unavailable.
         </p>
-        <button onClick={() => dispatch(fetchUsers())}> home page</button>
       </div>
     </div>
   );

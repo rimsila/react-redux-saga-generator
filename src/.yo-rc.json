@@ -4,15 +4,8 @@
       {
         "name": "index",
         "path": "index"
-      },
-      {
-        "name": "book",
-        "path": "book"
       }
     ],
-    "stores": [
-      "Users",
-      "Movies"
-    ]
+    "stores": []
   }
 }
