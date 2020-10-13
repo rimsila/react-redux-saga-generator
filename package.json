@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/rimsila/react-redux-saga-generator.git/issues"
   },
-  "homepage": "https://rimsila.github.io/react-redux-saga-generator",
+  "homepage": "https://rimsila.github.io/react-redux-saga-generator/",
   "<========================= SCRIPT ==================================>": "",
   "scripts": {
     "------------------ HELPERS ----------------------------------------": "",
