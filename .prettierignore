@@ -1,3 +1,7 @@
+# ----------- ingore some file in src --- -------
+state.ts
+src/api/*
+
 *.eot
 *.ico
 *.lock

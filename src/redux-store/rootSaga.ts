@@ -1,7 +1,7 @@
-import users from './users/sagas';
+import books from "./books/sagas";
 /* new-imported-saga-goes-here */
 
 export default [
-  users,
-/* new-imported-saga-element-goes-here */
+  books,
+  /* new-imported-saga-element-goes-here */
 ];

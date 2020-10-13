@@ -1,0 +1,12 @@
+//#region Reset doable for this state
+export const RESET_BOOKS_DOABLES = "RESET_BOOKS_DOABLES";
+export const TOGGLE_BOOKS_BOOLEANABLE_STATE = "TOGGLE_BOOKS_BOOLEANABLE_STATE";
+export const TOGGLE_BOOKS_ERRABLE_STATE = "TOGGLE_BOOKS_ERRABLE_STATE";
+export const TOGGLE_BOOKS_SUCCESSIBLE_STATE = "TOGGLE_BOOKS_SUCCESSIBLE_STATE";
+//#endregion
+
+export const FETCH_BOOKS = "FETCH_BOOKS";
+export const FETCH_BOOKS_SUCCESS = "FETCH_BOOKS_SUCCESS";
+export const FETCH_BOOKS_ERROR = "FETCH_BOOKS_ERROR";
+
+/* new-constant-export-goes-here */

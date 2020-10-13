@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from "axios";
 import { getAccessToken } from "@/utils/auth_token";
 import { catchError } from "./error";
@@ -76,7 +74,7 @@ const httpMethod = async (
     if (method !== "get") {
       catchError(undefined, res);
     }
-    return res?.data;
+    return res;
   } catch (catchAxiosError) {
     catchError(catchAxiosError);
     return catchAxiosError;

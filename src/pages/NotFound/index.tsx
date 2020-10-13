@@ -2,22 +2,22 @@ import "./styles.css";
 
 import * as React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  fetchUsers,
-  toggleUsersBooleanableState,
-} from "@/redux-store/users/actions";
-import { usersState } from "@/redux-store/users/selectors";
+
+import { booksStateSelector } from "@/redux-store/books/selectors";
+import { fetchBooks } from "@/redux-store/books/actions";
 
 const NotFound = () => {
   const dispatch = useDispatch();
-  const {
-    booleanable: { isFetchUsersInProgress },
-  } = useSelector(usersState());
+
+  const { books, isFetchBooksInProgress } = useSelector(booksStateSelector);
 
   React.useEffect(() => {
-    dispatch(fetchUsers());
+    dispatch(fetchBooks());
   }, []);
 
+  console.log("isFetchBooksInProgress", books);
+
+  if (isFetchBooksInProgress) return <h1>Loading...</h1>;
   return (
     <div id="notfound">
       <div className="notfound">
@@ -25,7 +25,7 @@ const NotFound = () => {
           <div></div>
           <h1>404</h1>
         </div>
-        <h2>Page not found {Number(isFetchUsersInProgress)}</h2>
+        <h2>Page not found </h2>
         <p>
           The page you are looking for might have been removed had its name
           changed or is temporarily unavailable.
@@ -35,4 +35,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default React.memo(NotFound);

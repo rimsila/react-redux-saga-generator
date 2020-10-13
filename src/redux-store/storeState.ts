@@ -1,7 +1,7 @@
-import { IUsersState } from './users/state';
+import { IBooksState } from "./books/state";
 /* new-imported-state-goes-here */
 
 export interface IStoreState {
-  readonly users: IUsersState;
-	/* new-imported-state-key-goes-here */
+  readonly books: IBooksState;
+  /* new-imported-state-key-goes-here */
 }
