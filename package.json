@@ -138,7 +138,7 @@
   },
   "git": {
     "scripts": {
-      "pre-push": "surge --project ./ --domain http://woebegone-stop.surge.sh"
+      "pre-push": "surge --project ./build --domain http://woebegone-stop.surge.sh"
     }
   },
   "main": ".eslintrc.js",
