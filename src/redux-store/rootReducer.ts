@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { combineReducers, Reducer, AnyAction } from 'redux';
-import { IStoreState } from './storeState';
+import { combineReducers, Reducer, AnyAction } from "redux";
+import { IStoreState } from "./storeState";
 
+import users from "./users/reducer";
 /* new-imported-reducer-goes-here */
 
 type StateComputedTypes = IStoreState[keyof IStoreState] | any;
@@ -34,6 +35,7 @@ export const reducerPayloadDoableHelper = (
 const rootReducer: Reducer<IStoreState, AnyAction> = combineReducers<
   IStoreState
 >({
+  users,
   /* new-tranformed-reducer-export-goes-here */
 });
 

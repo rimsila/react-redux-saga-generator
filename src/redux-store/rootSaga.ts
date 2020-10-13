@@ -1,5 +1,7 @@
+import users from './users/sagas';
 /* new-imported-saga-goes-here */
 
 export default [
-  /* new-imported-saga-element-goes-here */
+  users,
+/* new-imported-saga-element-goes-here */
 ];

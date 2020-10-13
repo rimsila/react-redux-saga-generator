@@ -6,6 +6,8 @@
         "path": "index"
       }
     ],
-    "stores": []
+    "stores": [
+      "Users"
+    ]
   }
 }
