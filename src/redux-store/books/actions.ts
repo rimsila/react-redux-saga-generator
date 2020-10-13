@@ -7,6 +7,12 @@ import {
   FETCH_BOOKS,
   FETCH_BOOKS_SUCCESS,
   FETCH_BOOKS_ERROR,
+  DELETE_BOOKS,
+  DELETE_BOOKS_SUCCESS,
+  DELETE_BOOKS_ERROR,
+  ADD_BOOKS,
+  ADD_BOOKS_SUCCESS,
+  ADD_BOOKS_ERROR,
   /* new-constant-import-goes-here */
 } from "./constants";
 import {
@@ -72,6 +78,58 @@ export const toggleBooksSuccessibleState = createAction<
 >(TOGGLE_BOOKS_SUCCESSIBLE_STATE, (key) => ({
   successible: key,
 }));
+//#endregion
+
+//#region deleteBooks-related constants
+
+export const deleteBooks = createAction<IBooksState>(DELETE_BOOKS, () => ({
+  booleanable: { isDeleteBooksInProgress: true },
+  errable: { deleteBooksErrorMsg: "" },
+  successible: { deleteBooksSuccessMsg: "" },
+}));
+
+export const deleteBooksSuccess = createAction<IBooksState, IBooksState>(
+  DELETE_BOOKS_SUCCESS,
+  (state) => ({
+    booleanable: { isDeleteBooksInProgress: false },
+    successible: { deleteBooksSuccessMsg: "DELETE_BOOKS action fullfilled!" },
+    state,
+  }),
+);
+
+export const deleteBooksError = createAction<IBooksState, string>(
+  DELETE_BOOKS_ERROR,
+  (deleteBooksErrorMsg) => ({
+    booleanable: { isDeleteBooksInProgress: false },
+    errable: { deleteBooksErrorMsg },
+  }),
+);
+//#endregion
+
+//#region addBooks-related constants
+
+export const addBooks = createAction<IBooksState>(ADD_BOOKS, () => ({
+  booleanable: { isAddBooksInProgress: true },
+  errable: { addBooksErrorMsg: null },
+  successible: { addBooksSuccessMsg: null },
+}));
+
+export const addBooksSuccess = createAction<IBooksState, IBooksState>(
+  ADD_BOOKS_SUCCESS,
+  (state) => ({
+    booleanable: { isAddBooksInProgress: false },
+    successible: { addBooksSuccessMsg: "ADD_BOOKS action fullfilled!" },
+    state,
+  }),
+);
+
+export const addBooksError = createAction<IBooksState, string>(
+  ADD_BOOKS_ERROR,
+  (addBooksErrorMsg) => ({
+    booleanable: { isAddBooksInProgress: false },
+    errable: { addBooksErrorMsg },
+  }),
+);
 //#endregion
 
 /* new-actions-go-here */

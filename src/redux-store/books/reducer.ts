@@ -6,6 +6,12 @@ import {
   FETCH_BOOKS,
   FETCH_BOOKS_SUCCESS,
   FETCH_BOOKS_ERROR,
+  DELETE_BOOKS,
+  DELETE_BOOKS_SUCCESS,
+  DELETE_BOOKS_ERROR,
+  ADD_BOOKS,
+  ADD_BOOKS_SUCCESS,
+  ADD_BOOKS_ERROR,
   /* new-constant-import-goes-here */
 } from "./constants";
 
@@ -35,6 +41,12 @@ export default (
     case FETCH_BOOKS:
     case FETCH_BOOKS_SUCCESS:
     case FETCH_BOOKS_ERROR:
+    case DELETE_BOOKS:
+    case DELETE_BOOKS_SUCCESS:
+    case DELETE_BOOKS_ERROR:
+    case ADD_BOOKS:
+    case ADD_BOOKS_SUCCESS:
+    case ADD_BOOKS_ERROR:
       /* new-constant-cases-go-here */
       return {
         ...state,

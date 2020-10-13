@@ -6,15 +6,18 @@ const booksState = (state: IStoreState) => state.books;
 export const booksStateSelector = createSelector(
   booksState,
   ({
-    booleanable: { isFetchBooksInProgress },
+    booleanable: { isFetchBooksInProgress, isDeleteBooksInProgress },
     books,
-    errable: { fetchBooksErrorMsg },
-    successible: { fetchBooksSuccessMsg },
+    errable: { fetchBooksErrorMsg, deleteBooksErrorMsg },
+    successible: { fetchBooksSuccessMsg, deleteBooksSuccessMsg },
   }) => ({
     isFetchBooksInProgress,
     books,
     fetchBooksErrorMsg,
     fetchBooksSuccessMsg,
+    isDeleteBooksInProgress,
+    deleteBooksErrorMsg,
+    deleteBooksSuccessMsg,
   }),
 );
 
