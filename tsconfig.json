@@ -21,7 +21,9 @@
       "@/hocs/*": ["./src/hocs/*"],
       "@/routes/*": ["./src/routes/*"],
       "@/redux-store/*": ["src/redux-store/*"],
-      "@/contexts/*": ["src/contexts/*"]
+      "@/contexts/*": ["src/contexts/*"],
+      "@/models/*": ["src/models/*"],
+      "@/model": ["src/models/"],
     }
   },
   "exclude": ["node_modules"],

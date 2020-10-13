@@ -20,6 +20,8 @@ module.exports = {
       "@/routes": resolve(__dirname, "../../src/routes"),
       "@/redux-store": resolve(__dirname, "../../src/redux-store"),
       "@/contexts": resolve(__dirname, "../../src/contexts"),
+      "@/model": resolve(__dirname, "../../src/models/index"),
+      "@/models": resolve(__dirname, "../../src/models"),
     },
   },
   context: resolve(__dirname, "../../src"),
