@@ -23,7 +23,9 @@
     "url": "https://github.com/rimsila/react-redux-saga-generator.git/issues"
   },
   "homepage": "https://rimsila.github.io/react-redux-saga-generator/",
+
   "demo": "http://woebegone-stop.surge.sh/",
+  
   "<========================= SCRIPT ==================================>": "",
   "scripts": {
     "------------------ HELPERS ----------------------------------------": "",
@@ -39,7 +41,8 @@
     "https:prod": "webpack -p --https --config=configs/webpack/prod.js",
     "prod": "node server.js",
     "analyze": "yarn build && webpack -p --config=configs/webpack/analyzer.js",
-    "deploy": "gh-pages -d build",
+    "deploy:gh-page": "gh-pages -d build",
+    "deploy": "surge --project ./build --domain http://woebegone-stop.surge.sh",
     "------------------ TESTING ------------------------------------------": "",
     "test": "jest --coverage --watchAll --config=configs/jest.json",
     "------------------ TOOL & GENERATOR ---------------------------------": "",
@@ -138,7 +141,7 @@
   },
   "git": {
     "scripts": {
-      "pre-push": "surge --project ./build --domain http://woebegone-stop.surge.sh"
+      "#pre-push": "surge --project ./build --domain http://woebegone-stop.surge.sh"
     }
   },
   "main": ".eslintrc.js",
