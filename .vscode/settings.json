@@ -1,4 +1,26 @@
+
 {
+    "files.associations": {
+      "*.tsx": "javascriptreact"
+    },
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "files.exclude": {
+      "**/.DS_Store": true,
+      "**/.git": true,
+      "**/.hg": true,
+      "**/.svn": true,
+      "**/CVS": true,
+      "build": true,
+      "dist": true,
+      "node_modules": true
+    },
+
     "cSpell.words": [
         "Booleanable",
         "DOABLES",
@@ -14,5 +36,7 @@
         "occured",
         "postbuild",
         "successible"
-    ]
-}
+    ],
+    "workbench.iconTheme": "material-icon-theme"
+  }
+  
