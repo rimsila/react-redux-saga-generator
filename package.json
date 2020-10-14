@@ -47,6 +47,7 @@
     "test": "jest --coverage --watchAll --config=configs/jest.json",
     "------------------ TOOL & GENERATOR ---------------------------------": "",
     "store": "cd ./src && yo nextjs-typescript-antd:store",
+    "boolean": "cd ./src && yo nextjs-typescript-antd:boolean",
     "action": "cd ./src && yo nextjs-typescript-antd:action",
     "page": "cd ./src && yo nextjs-typescript-antd:page",
     "com": "cd ./src && yo nextjs-typescript-antd:component",
