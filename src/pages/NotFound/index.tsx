@@ -34,6 +34,7 @@ const NotFound = () => {
           changed or is temporarily unavailable.
         </p>
       </div> */}
+      <h1>Test get data from api</h1>
       {isFetchBooksInProgress
         ? "Loading.................................................................................................................100%"
         : JSON.stringify(books)}
