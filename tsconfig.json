@@ -17,13 +17,14 @@
       "@/api": ["./src/api/"],
       "@/pages/*": ["./src/pages/*"],
       "@/components/*": ["./src/components/*"],
+      "@/component": ["./src/components/"],
       "@/hooks/*": ["./src/hooks/*"],
       "@/hocs/*": ["./src/hocs/*"],
       "@/routes/*": ["./src/routes/*"],
       "@/redux-store/*": ["src/redux-store/*"],
       "@/contexts/*": ["src/contexts/*"],
       "@/models/*": ["src/models/*"],
-      "@/model": ["src/models/"],
+      "@/model": ["src/models/"]
     }
   },
   "exclude": ["node_modules"],

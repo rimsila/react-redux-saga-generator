@@ -44,3 +44,4 @@ webpack.config.js
 tools
 package.json
 # configs
+i18n.js

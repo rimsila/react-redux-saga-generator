@@ -23,7 +23,7 @@ function* fetchBooksSaga() {
     const { status, data } = response;
     // console.log("response", response);
     if (status === 200) {
-      yield delay(50000);
+      yield delay(2000);
       yield put(fetchBooksSuccess({ books: data?.data }));
     } else {
       yield put(fetchBooksError("Sorry! An error occured!"));

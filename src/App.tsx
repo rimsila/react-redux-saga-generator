@@ -5,30 +5,24 @@ import { configureStore } from "@/redux-store/createStore";
 
 import { PersistGate } from "redux-persist/integration/react";
 
-// import { CssBaseline } from "@material-ui/core";
-// import { ThemeProvider } from "@material-ui/styles";
-
 import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "./routes";
-// import { FavoriteProvider } from "./store/favorite/useHook.js";
-// import theme from './themes';
-// import SnackbarCustom from '@/components/SnackbarCustom';
+import { CssBaseline, ThemeProvider } from "@material-ui/core";
+import themes from "./themes";
 const { store, persistor } = configureStore();
+import "./i18n";
 
 function App() {
   return (
     <Router>
-      {/* <CssBaseline /> */}
-      {/* <ThemeProvider theme={theme}> */}
-      <Provider store={store}>
-        {/* <FavoriteProvider> */}
-        {/* <SnackbarCustom /> */}
-        <PersistGate loading={null} persistor={persistor}>
-          <Routes />
-        </PersistGate>
-        {/* </FavoriteProvider> */}
-      </Provider>
-      {/* </ThemeProvider> */}
+      <CssBaseline />
+      <ThemeProvider theme={themes}>
+        <Provider store={store}>
+          <PersistGate loading={null} persistor={persistor}>
+            <Routes />
+          </PersistGate>
+        </Provider>
+      </ThemeProvider>
     </Router>
   );
 }

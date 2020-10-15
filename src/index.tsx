@@ -5,4 +5,11 @@ import { render } from "react-dom";
 
 const rootEl = document.getElementById("root");
 
-render(<App />, rootEl);
+render(
+  <>
+    <React.Suspense fallback={null}>
+      <App />
+    </React.Suspense>
+  </>,
+  rootEl,
+);

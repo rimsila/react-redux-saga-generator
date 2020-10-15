@@ -8,6 +8,7 @@ import {
   fetchBooks,
   toggleBooksBooleanableState,
 } from "@/redux-store/books/actions";
+import { I18N, NavBar } from "@/component";
 
 const NotFound = () => {
   const dispatch = useDispatch();
@@ -19,10 +20,11 @@ const NotFound = () => {
   }, []);
 
   console.log("isFetchBooksInProgress", books);
-
   // if (isFetchBooksInProgress) return <h1>Loading...</h1>;
   return (
     <div id="notfound">
+      <NavBar />
+      <I18N i18nKey="title1" />
       {/* <div className="notfound">
         <div className="notfound-404">
           <div></div>
