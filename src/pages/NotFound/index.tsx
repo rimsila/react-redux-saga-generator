@@ -1,5 +1,3 @@
-import "./styles.css";
-
 import * as React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -9,6 +7,9 @@ import {
   toggleBooksBooleanableState,
 } from "@/redux-store/books/actions";
 import { I18N, NavBar } from "@/component";
+import Layout from "@/components/global/layout";
+import Content from "@/components/global/layout/content";
+import { Box } from "@material-ui/core";
 
 const NotFound = () => {
   const dispatch = useDispatch();
@@ -22,38 +23,55 @@ const NotFound = () => {
   console.log("isFetchBooksInProgress", books);
   // if (isFetchBooksInProgress) return <h1>Loading...</h1>;
   return (
-    <div id="notfound">
+    <Layout title="404">
       <NavBar />
       <I18N i18nKey="title1" />
-      {/* <div className="notfound">
-        <div className="notfound-404">
-          <div></div>
-          <h1>404</h1>
+
+      <Content>
+        <div>
+          <h1>Test get data from api</h1>
+          {isFetchBooksInProgress
+            ? "Loading.................................................................................................................100%"
+            : JSON.stringify(books)}
+          <br />
+          <br />
+          <button
+            onClick={() =>
+              dispatch(
+                toggleBooksBooleanableState({
+                  isFetchBooksInProgress: !isFetchBooksInProgress,
+                }),
+              )
+            }
+          >
+            Toggle Loading: {String(isFetchBooksInProgress)}
+          </button>
         </div>
-        <h2>Page not found </h2>
-        <p>
-          The page you are looking for might have been removed had its name
-          changed or is temporarily unavailable.
-        </p>
-      </div> */}
-      <h1>Test get data from api</h1>
-      {isFetchBooksInProgress
-        ? "Loading.................................................................................................................100%"
-        : JSON.stringify(books)}
-      <br />
-      <br />
-      <button
-        onClick={() =>
-          dispatch(
-            toggleBooksBooleanableState({
-              isFetchBooksInProgress: !isFetchBooksInProgress,
-            }),
-          )
-        }
-      >
-        Toggle Loading: {String(isFetchBooksInProgress)}
-      </button>
-    </div>
+      </Content>
+
+      <Content maxWidth="sm">
+        <div>
+          <h1>Test get data from api</h1>
+          {isFetchBooksInProgress
+            ? "Loading.................................................................................................................100%"
+            : JSON.stringify(books)}
+          <br />
+          <br />
+          <button
+            onClick={() =>
+              dispatch(
+                toggleBooksBooleanableState({
+                  isFetchBooksInProgress: !isFetchBooksInProgress,
+                }),
+              )
+            }
+          >
+            Toggle Loading: {String(isFetchBooksInProgress)}
+          </button>
+        </div>
+      </Content>
+      <Box bgcolor="red">hello</Box>
+    </Layout>
   );
 };
 
