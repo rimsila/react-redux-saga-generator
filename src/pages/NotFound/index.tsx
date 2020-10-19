@@ -6,7 +6,7 @@ import {
   fetchBooks,
   toggleBooksBooleanableState,
 } from "@/redux-store/books/actions";
-import { I18N, NavBar } from "@/component";
+import { I18N, NavBar, ShareSocial } from "@/component";
 import Layout from "@/components/global/layout";
 import Content from "@/components/global/layout/content";
 import { Box } from "@material-ui/core";
@@ -30,6 +30,7 @@ const NotFound = () => {
       <Content>
         <div>
           <h1>Test get data from api</h1>
+          <ShareSocial />
           {isFetchBooksInProgress
             ? "Loading.................................................................................................................100%"
             : JSON.stringify(books)}

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
 
-const defaultDescription = "";
+const defaultDescription = "wellcome react js desc";
 const defaultOGURL = "";
 const defaultOGImage = "";
 

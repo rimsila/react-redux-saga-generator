@@ -3,4 +3,6 @@ export { default as NavBar } from "./global/navBar";
 export { default as SelectLanguage } from "./global/selectLanguage";
 export { default as layout } from "./global/layout";
 export { default as head } from "./global/layout/head";
+export { default as ShareSocial } from "./global/socialShare";
+export { default as HelmetHead } from "./global/helmetHead";
 /* new-component-import-goes-here */
