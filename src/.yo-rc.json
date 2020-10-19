@@ -4,11 +4,12 @@
       {
         "name": "index",
         "path": "index"
+      },
+      {
+        "name": "index",
+        "path": "index"
       }
     ],
-    "stores": [
-      "Users",
-      "Books"
-    ]
+    "stores": []
   }
 }

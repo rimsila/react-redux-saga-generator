@@ -4,10 +4,10 @@ export const ROUTE_PATH = {
   homePage: "/homePage",
   login: "/login",
   register: "/register",
-  notFound: "/notFound"
+  notFound: "/notFound",
 };
 
 export const ROUTE_API = {
   root: "https://gorest.co.in/public-api",
-  getDeliveryLocation: "https://api.bloc.asia/v1/maps/geolocations_update"
+  getDeliveryLocation: "https://api.bloc.asia/v1/maps/geolocations_update",
 };

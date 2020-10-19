@@ -1,0 +1,10 @@
+{
+  "---------------------------------------------- LanguageScreen --------------------------------------------------": "",
+  "ch": "中文",
+  "en": "English",
+  "jp": "ភាសាជប៉ុន",
+  "km": "ភាសាខ្មែរ",
+
+  "-----------For English, Most case we use key as text render. So, we need to put some case that we want to show the key and value diff -----------------": "",
+  "-----------Ex: 'title':'title abcd' if the same text don't require to put in here-----------------": ""
+}

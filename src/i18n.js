@@ -29,8 +29,8 @@ i18n
         // ** Integrated Webserver **
 
         backend: {
-            loadPath: 'src/static/locales/{{lng}}/{{ns}}.json',
-            addPath: 'src/static/locales/add/{{lng}}/{{ns}}',
+            loadPath: 'src/locales/{{lng}}/{{ns}}.json',
+            addPath: 'src/locales/add/{{lng}}/{{ns}}',
         },
 
         // ** Extract **

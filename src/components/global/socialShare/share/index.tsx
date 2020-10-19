@@ -23,7 +23,7 @@ export const ShareList: React.FC<{
 }> = ({ children, title, url }) => {
   return (
     <Box display="flex" justifyContent="space-between" minWidth={230}>
-      <FacebookShareButton title={title} url={url}>
+      {/* <FacebookShareButton title={title} url={url}>
         <FacebookIcon size={32} />
       </FacebookShareButton>
 
@@ -45,7 +45,7 @@ export const ShareList: React.FC<{
 
       <LinkedinShareButton title={title} url={url}>
         <LinkedinIcon size={32} />
-      </LinkedinShareButton>
+      </LinkedinShareButton> */}
       {children}
     </Box>
   );

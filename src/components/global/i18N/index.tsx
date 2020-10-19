@@ -18,7 +18,6 @@ interface IProps {
 }
 
 const nameSpace = [
-  "about",
   /* new-locales-import-goes-here */
 ];
 

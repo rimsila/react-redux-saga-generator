@@ -5,4 +5,6 @@ export { default as layout } from "./global/layout";
 export { default as head } from "./global/layout/head";
 export { default as ShareSocial } from "./global/socialShare";
 export { default as HelmetHead } from "./global/helmetHead";
+export { default as Content } from "./global/layout/Content";
+export { default as Layout } from "./global/layout";
 /* new-component-import-goes-here */

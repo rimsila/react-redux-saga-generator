@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import * as React from "react";
 import { Route, Redirect } from "react-router-dom";
 import { ROUTE_PATH } from "@/utils/route-util";

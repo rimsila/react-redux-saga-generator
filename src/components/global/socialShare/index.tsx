@@ -15,7 +15,7 @@ const CusMenu = withStyles({
   paper: {
     minWidth: 160,
   },
-})(({ ...rest }) => (
+})(({ ...rest }: any) => (
   <Menu
     open={false}
     getContentAnchorEl={null}

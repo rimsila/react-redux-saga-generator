@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Switch, Route } from "react-router-dom";
-import { ROUTE_PATH } from "@/utils/route-util";
+// import { ROUTE_PATH } from "@/utils/route-util";
 import ProtectedRoute from "@/routes/protectedRoute";
 import { routes } from "./routes";
 
@@ -29,7 +29,10 @@ export default function Routes() {
         {/* <Route path={ROUTE_PATH.register} component={Register} /> */}
 
         {/* //* page 404 */}
-        {/* <Route path="" component={lazy(() => import("pages/NotFound"))} /> */}
+        <Route
+          path="*"
+          component={React.lazy(() => import("@/pages/notFound"))}
+        />
       </Switch>
     </React.Suspense>
   );

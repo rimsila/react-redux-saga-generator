@@ -8,7 +8,6 @@ const useShare = () => {
 
   const eventRef = useRef(null);
 
-  //* find notification isReadNotification
   const handleClick = useCallback(() => {
     setAnchorEl(eventRef.current);
   }, []);
